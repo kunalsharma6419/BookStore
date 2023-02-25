@@ -1,0 +1,73 @@
+Book Management System
+This is a Book Management System built with Laravel. It allows users to view, search, and filter books, and administrators to add, edit, and delete books.
+
+Features
+User authentication and authorization
+Ability to view all books and individual book details
+Search and filter books by title, author, publication date, ISBN, and genre
+Ability for administrators to add, edit, and delete books
+Installation
+Clone the repository to your local machine:
+bash
+Copy code
+git clone https://github.com/your-username/book-management-system.git
+
+Navigate to the project directory and install dependencies:
+cd book-management-system
+composer install
+
+Create a new .env file by copying the .env.example file:
+cp .env.example .env
+
+Generate a new APP_KEY:
+php artisan key:generate
+
+Create a new database and update the .env file with your database credentials:
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=bookstore
+DB_USERNAME=your-database-username
+DB_PASSWORD=your-database-password
+
+Run database migrations:
+php artisan migrate
+
+Start the development server:
+php artisan serve
+
+Usage:
+Visit the homepage at http://localhost:8000
+Use the navigation menu to view all books, search for books, or log in (as an administrator) to add, edit, or delete books
+
+Routes
+Here are the main routes used in this application:
+
+Authentication
+GET /login: Display the login form.
+POST /login: Authenticate the user.
+POST /logout: Logout the user.
+Home
+GET /: Display the home page.
+Books
+GET /books: Display the list of all books.
+GET /books/{book}: Display a specific book.
+GET /books/{id}/edit: Display the form to edit a specific book.
+PUT /books/{id}: Update a specific book.
+DELETE /books/{id}: Delete a specific book.
+Search
+GET /search: Display the form to search for books.
+GET /searchbooks: Display the results of the book search.
+Admin
+GET /store: Display the form to create a new book.
+POST /storebooks: Create a new book.
+GET /books/{id}/edit: Display the form to edit a specific book.
+PUT /books/{id}: Update a specific book.
+DELETE /books/{id}: Delete a specific book.
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+
+login :
+user@gmail.com
+password - User@1234
